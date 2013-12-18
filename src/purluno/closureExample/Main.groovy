@@ -3,14 +3,15 @@ package purluno.closureExample
 class Main {
 	static main(args) {
 		def m = new Main()
-		m.example1()
-		m.example2()
-		m.example3()
-		m.example4()
-		m.example5()
-		m.example6()
-		m.example7()
-		m.example8()
+//		m.example1()
+//		m.example2()
+//		m.example3()
+//		m.example4()
+//		m.example5()
+//		m.example6()
+//		m.example7()
+//		m.example8()
+		m.example9()
 	}
 
 	/**
@@ -107,8 +108,30 @@ class Main {
 		def list = ['a', 'b', 'c', 'd']
 		def newList = []
 		
-		def clos = { it.toUpperCase() }
+		def clos = { it + "X" }
 		list.collect(newList, clos)
 		println newList
+	}
+	
+	def example9() {
+		def a = ['a', 'b', 'c', 'd']
+		def b = []
+		Util.collect2(a, b)
+		println a
+		println b
+		
+		def aa = ['a', 'b', 'c', 'd']
+		def bb = []
+		def clos = { e -> e + "X" }
+		Util.collect(aa, bb, clos)
+		println aa
+		println bb
+		
+		def aaa = ['a', 'b', 'c', 'd']
+		def bbb = []
+		def clos2 = { e -> e + "Y" }
+		Util.collect(aaa, bbb, clos2)
+		println aaa
+		println bbb
 	}
 }
