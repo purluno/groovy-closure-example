@@ -1,6 +1,9 @@
 package purluno.closureExample
 
 class Main {
+	/**
+	 * 각각의 예제를 실행하는 메인 메소드
+	 */
 	static main(args) {
 		def m = new Main()
 //		m.example1()
